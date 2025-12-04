@@ -1,27 +1,222 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Warna Netral (Neutral Colors) */
+  --color-neutral-25: #FCFCFD;
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #EEF2F6;
+  --color-neutral-200: #E3E8EF;
+  --color-neutral-300: #CDD5DF;
+  --color-neutral-400: #9AA4B2;
+  --color-neutral-500: #697586;
+  --color-neutral-600: #4B5565;
+  --color-neutral-700: #364152;
+  --color-neutral-800: #202939;
+  --color-neutral-900: #121926;
+
+  /* Warna Primer (Primary Colors) */
+  --color-primary-25: #F5F8FF;
+  --color-primary-50: #EFF4FF;
+  --color-primary-100: #D1E0FF;
+  --color-primary-200: #B2CCFF;
+  --color-primary-300: #84ADFF;
+  --color-primary-400: #528BFF;
+  --color-primary-500: #2970FF;
+  --color-primary-600: #155EEF;
+  --color-primary-700: #004EEB;
+  --color-primary-800: #0040C1;
+  --color-primary-900: #00359E;
+
+  /* Warna Sukses (Success Colors - Hijau) */
+  --color-success-25: #F6FEF9;
+  --color-success-50: #EDFCF2;
+  --color-success-100: #D3F8DF;
+  --color-success-200: #AAF0C4;
+  --color-success-300: #73E2A3;
+  --color-success-400: #73E2A3;
+  --color-success-500: #16B364;
+  --color-success-600: #099250;
+  --color-success-700: #087443;
+  --color-success-800: #095C37;
+  --color-success-900: #084C2E;
+
+  /* Warna Error (Error Colors - Merah) */
+  --color-error-25: #FFFBFA;
+  --color-error-50: #FEF3F2;
+  --color-error-100: #FEE4E2;
+  --color-error-200: #FECDCA;
+  --color-error-300: #FDA29B;
+  --color-error-400: #F97066;
+  --color-error-500: #F04438;
+  --color-error-600: #D92D20;
+  --color-error-700: #B42318;
+  --color-error-800: #912018;
+  --color-error-900: #7A271A;
+
+  /* Pavlova (Warna Kuning/Coklat Muda) */
+  --color-pavlova-50: #F5F2E6;
+  --color-pavlova-100: #F2EFE1;
+  --color-pavlova-200: #EAE5D0;
+  --color-pavlova-300: #E1DBBF;
+  --color-pavlova-400: #D9D1AE;
+  --color-pavlova-500: #D0C79E;
+  --color-pavlova-600: #C6BD8D;
+  --color-pavlova-700: #BDB27E;
+  --color-pavlova-800: #B3A76E;
+  --color-pavlova-900: #A89C5F;
+  --color-pavlova-950: #AEC752;
+
+  /* Glacier (Warna Biru) */
+  --color-glacier-50: #FBFDFE;
+  --color-glacier-100: #DCEDF5;
+  --color-glacier-200: #BFDEEB;
+  --color-glacier-300: #A3CEE0;
+  --color-glacier-400: #88BFD2;
+  --color-glacier-500: #6FAFC4;
+  --color-glacier-600: #519BB4;
+  --color-glacier-700: #438094;
+  --color-glacier-800: #376473;
+  --color-glacier-900: #294852;
+  --color-glacier-950: #1B2D33;
+
+  /* Amazon (Warna Hijau Tua) */
+  --color-amazon-50: #ECF5F0;
+  --color-amazon-100: #CFE4D8;
+  --color-amazon-200: #B3D2C1;
+  --color-amazon-300: #89B19C;
+  --color-amazon-400: #65967D;
+  --color-amazon-500: #417C60;
+  --color-amazon-600: #34634D;
+  --color-amazon-700: #274A3A;
+  --color-amazon-800: #1A3227;
+  --color-amazon-900: #1E2625;
+  --color-amazon-950: #0A0C0C;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-plusjakarta), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mochesa), Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
