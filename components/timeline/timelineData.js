@@ -27,7 +27,7 @@ export const timelineData = [
     description:
       "GAMAFTR 2025 menyediakan wadah bagi siswa/i di Provinsi Riau yang ingin mempersiapkan diri masuk Perguruan Tinggi serta menguji kemampuannya.",
     image: "/timeline/tryout.jpeg",
-    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeWc36q-WbqgrOVw56Ymhsax7jY9izhIsPOx8QQY08rCYyZfg/viewform", // Google Form TOTIK
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc4p09pS_A-xRf8mnE7V2kmpqfPHR7LTG7GDA7Ne-J9-Ir4pQ/viewform", // Google Form TOTIK
     maps: [
       { label: "Try Out di Kota Pekanbaru", url: "https://www.google.com/maps/place/TryOut+KotaA" },
       { label: "Try Out di Kota Duri", url: "https://www.google.com/maps/place/TryOut+KotaB" },
@@ -36,12 +36,12 @@ export const timelineData = [
   {
     id: 4,
     title: "Bedah Kampus",
-    date: "24 Januari 2026",
-    location: "TBA",
+    date: "25 Januari 2026",
+    location: "Susiana Tabrani Convention Hall",
     description:
       "Penutupan rangkaian kegiatan GAMAFTR 2025 yang akan mendatangkan Guest Star serta penampilan dari mahasiswa/i UGM sebagai puncak acara.",
     image: "/timeline/bedkam.jpeg",
-    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeWc36q-WbqgrOVw56Ymhsax7jY9izhIsPOx8QQY08rCYyZfg/viewform", // Google Form TOTIK
-    mapsUrl: "https://www.google.com/maps/place/BedahKampus+Venue", // Link to Google Maps Bedkam
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc4p09pS_A-xRf8mnE7V2kmpqfPHR7LTG7GDA7Ne-J9-Ir4pQ/viewform", // Google Form TOTIK
+    mapsUrl: "https://maps.app.goo.gl/KgariLLpnvfZjQEYA", // Link to Google Maps Bedkam
   },
 ];
